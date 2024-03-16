@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input[type="text"]{
+    font-size: 3rem;
+    height: 7rem;
+}
+.btn{
+    display: flex;
+    justify-content: space-around;
+    width: 37rem;
+    height: 38rem;
+    padding: 2.7rem;
+    border: 5px solid black;
+    flex-wrap: wrap;
+    background-color: lightgray;
+}
+input[type="button"]{
+    font-size: 3rem;
+    margin-top: 2rem;
+    width: 8rem;
+    height: 6rem;
+    background-color: grey;
+    cursor: pointer;
+}
+input[type="button"]:hover{
+    transform: scale(1.10);
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test5</title>
+    <style>
+        .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input[type="text"]{
+    font-size: 3rem;
+    height: 7rem;
+}
+.btn{
+    display: flex;
+    justify-content: space-around;
+    width: 37rem;
+    height: 38rem;
+    padding: 2.7rem;
+    border: 5px solid black;
+    flex-wrap: wrap;
+    background-color: lightgray;
+}
+input[type="button"]{
+    font-size: 3rem;
+    margin-top: 2rem;
+    width: 8rem;
+    height: 6rem;
+    background-color: grey;
+    cursor: pointer;
+}
+input[type="button"]:hover{
+    transform: scale(1.10);
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="btn">
+            <input type="text" name="text" id="txt"><br>
+            <input type="button"  id="1" value="1" onclick="dis('1')">
+            <input type="button" id="2" value="2" onclick="dis('2')">
+            <input type="button" id="3" value="3" onclick="dis('3')">
+            <input type="button" id="+" value="+" onclick="dis('+')">
+            <input type="button" id="4" value="4" onclick="dis('4')">
+            <input type="button" id="5" value="5" onclick="dis('5')">
+            <input type="button" id="6" value="6" onclick="dis('6')">
+            <input type="button" id="-" value="-" onclick="dis('-')">
+            <input type="button" id="7" value="7" onclick="dis('7')">
+            <input type="button" id="8" value="8" onclick="dis('8')">
+            <input type="button" id="9" value="9" onclick="dis('9')">
+            <input type="button" id="/" value="/" onclick="dis('/')">
+            <input type="button" id="C" value="C" onclick="clr()">
+            <input type="button" id="0" value="0" onclick="dis('0')">
+            <input type="button" id="." value="." onclick="dis('.')">
+            <input type="button" id="=" value="=" onclick="solve()">
+            
+        </div>
+    </div>
+    <script >
+        let txt  = document.getElementById("txt");
+function dis(val)
+{
+    txt.value += val;
+}
+function solve()
+{
+    let x = txt.value;
+    let y=eval(x);
+    txt.value=y;
+}
+function clr(){
+    txt.value = "";
+}
+window.addEventListener("keypress",function(inp){
+    if(inp.key =="1")
+    {
+        document.getElementById("1").click();
+    }
+    else if(inp.key =="2")
+    {
+        document.getElementById("2").click();
+    }
+    else if(inp.key =="3")
+    {
+        document.getElementById("3").click();
+    }
+    else if(inp.key =="4")
+    {
+        document.getElementById("4").click();
+    }
+    else if(inp.key =="5")
+    {
+        document.getElementById("5").click();
+    }
+    else if(inp.key =="6")
+    {
+        document.getElementById("6").click();
+    }
+    else if(inp.key =="7")
+    {
+        document.getElementById("7").click();
+    }
+    else if(inp.key =="8")
+    {
+        document.getElementById("8").click();
+    }
+    else if(inp.key =="9")
+    {
+        document.getElementById("9").click();
+    }
+    else if(inp.key =="+")
+    {
+        document.getElementById("+").click();
+    }
+    else if(inp.key =="-")
+    {
+        document.getElementById("-").click();
+    }
+    else if(inp.key =="*")
+    {
+        document.getElementById("*").click();
+    }
+    else if(inp.key =="/")
+    {
+        document.getElementById("/").click();
+    }
+    else if(inp.key =="Enter")
+    {
+        document.getElementById("=").click();
+    }
+    
+    
+})
+    </script>
+</body>
+
+</html>
